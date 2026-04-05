@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ms-gateway
+
+# Rota para o Microserviço de Cliente
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: rota-cliente
+              uri: http://localhost:8081
+              predicates:
+                - Path=/cliente/**
+
+            - id: rota-conta
+              uri: http://localhost:8082
+              predicates:
+                - Path=/conta/**
