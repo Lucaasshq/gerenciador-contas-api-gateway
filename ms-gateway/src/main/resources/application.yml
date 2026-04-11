@@ -5,7 +5,7 @@ spring:
   application:
     name: ms-gateway
 
-# Rota para o Microserviço de Cliente
+# Rota para o Microservico de Cliente
   cloud:
     gateway:
       server:
@@ -20,3 +20,10 @@ spring:
               uri: http://localhost:8082
               predicates:
                 - Path=/conta/**
+
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.web.reactive.function.client.WebClient: DEBUG
+    com.lucas.ms_gateway: DEBUG
