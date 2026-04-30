@@ -22,6 +22,12 @@ spring:
                 - Path=/conta/**
 
 
+            - id: rota-home
+              uri: no://op
+              predicates:
+                - Path=/, /home
+
+
 logging:
   level:
     org.springframework.cloud.gateway: TRACE
