@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "ms-gateway",
+        "ms-conta",
+        "ms-usuario"
+    ]
+}
